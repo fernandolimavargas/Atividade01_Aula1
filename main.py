@@ -22,6 +22,13 @@ class Produto:
     def imprimir(self): 
         print(f'Produto: {self.produto}\nPreço: {self.preco}\nQuantidade: {self.quantidade}')
     
+    
+    def remover(self): 
+        remover = input('Qual produto deseja remover?') 
+        if remover == self.produto: 
+            lst_produto.remove(self.produto)
+            print('Produto removido')
+
 
 a1 = Produto('Coca-Cola', 10, 15)
 a1.imprimir()
@@ -35,3 +42,7 @@ lst_quantidade.append(a1.quantidade)
 print(lst_produto)
 print(lst_preco)
 print(lst_quantidade)
+
+a1.remover()
+print(lst_produto)
+
